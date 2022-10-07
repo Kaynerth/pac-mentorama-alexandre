@@ -276,6 +276,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inky
       objectReference: {fileID: 0}
+    - target: {fileID: 3943481494146490870, guid: 0c2b88605f5ae9c4b8dc040821d73e7e,
+        type: 3}
+      propertyPath: GhostType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c2b88605f5ae9c4b8dc040821d73e7e, type: 3}
 --- !u!1 &519420028
@@ -665,6 +670,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3187458661176914936, guid: 7084e9789ba5c1d489f0ab130e835b14,
+        type: 3}
+      propertyPath: GhostType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3898945533861560682, guid: 7084e9789ba5c1d489f0ab130e835b14,
         type: 3}
       propertyPath: m_Name
@@ -734,6 +744,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5663137435393313327, guid: 799d3ec5443fc934982d83954d10e5af,
+        type: 3}
+      propertyPath: GhostType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6102509383417002170, guid: 799d3ec5443fc934982d83954d10e5af,
         type: 3}
       propertyPath: m_RootOrder
