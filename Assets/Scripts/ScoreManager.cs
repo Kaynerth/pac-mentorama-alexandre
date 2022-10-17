@@ -5,6 +5,7 @@ public class ScoreManager : MonoBehaviour
 {
     private int _currentScore;
     private int _highScore;
+    private int _scoreMultiplier = 1;
 
     public int CurrentScore { get => _currentScore; }
     public int HighScore { get => _highScore; }
@@ -23,6 +24,31 @@ public class ScoreManager : MonoBehaviour
         foreach (var collectable in allCollectables)
         {
             collectable.OnCollected += Collectable_OnCollected;
+        }
+
+        var allGhosts = FindObjectsOfType<GhostAI>();
+        foreach (var ghost in allGhosts)
+        {
+            ghost.OnGhostCaptured += Ghost_OnGhostCaptured;
+            ghost.OnVulnerabilityFade += GhostComponent_OnVulnerabilityFade;
+        }
+    }
+
+    private void GhostComponent_OnVulnerabilityFade()
+    {
+        _scoreMultiplier = 1;
+    }
+
+    private void Ghost_OnGhostCaptured(int score, GhostAI ghost)
+    {
+        _currentScore += score * _scoreMultiplier;
+        OnScoreChange?.Invoke(_currentScore);
+        _scoreMultiplier++;
+
+        if (_currentScore >= _highScore)
+        {
+            _highScore = _currentScore;
+            OnHighScoreChange?.Invoke(_highScore);
         }
     }
 

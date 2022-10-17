@@ -122,6 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a26f81c867d53b842aedb9a0bc8b3674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Score: 200
   VulnerabilityEndingTime: 3
 --- !u!114 &6842000228609667103
 MonoBehaviour:
